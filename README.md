@@ -8,7 +8,6 @@
 
 * **Works natively on categorical attributes** – no one-hot / embeddings needed.  
 * **Entropy-minimisation principle** → crisp, interpretable clusters.  
-* Optional **streaming & re-placement** mode (the `r` / `m.replacement` parameter) for very large or order-dependent datasets.  
 * **No heavy deps**: NumPy & Pandas are *optional*; pure-Python fallback provided.  
 * Fully typed, NumPy-style doc-strings, scikit-learn-like API (`fit`, `predict`, `fit_predict`).
 
@@ -25,7 +24,6 @@
   model = Coolcat(
       n_clusters=3,
       batch_size=200,        # streaming buffer (optional)
-      replacement_prop=0.15, # re-placement fraction r  (0 ≦ r < 1)
       random_state=42,
   )
   
